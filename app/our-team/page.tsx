@@ -1,4 +1,7 @@
+import SmallHero from '@/components/Small-Hero/page'
+
 import { Metadata } from 'next';
+
 const data = {
   title:'Our Teams',
   description:'This website provide components and templates of react , next js and typescript support with tailwind css and chakura ui.',
@@ -13,8 +16,9 @@ export const metadata: Metadata = {
 }
 export default function page() {
 
-
   return (
-    <div>page</div>
+    <>
+      <SmallHero head={`${data.title}`} />
+    </>
   )
 }
