@@ -31,4 +31,5 @@ export interface PCard {
     head : string;
     dollar : number;
     Live : string;
+    cat : string;
 }

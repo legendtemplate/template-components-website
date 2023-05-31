@@ -1,14 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*,*::before,*::after{
+  @apply m-0 p-0 box-border;
+}
 body {
-  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  @apply overflow-x-hidden m-0 p-0 text-base leading-normal bg-slate-50;
+}
+::selection {
+  @apply bg-red-500 text-white;
 }
 .card:hover {
   transform: scale(0.9, 0.9);
 }
 .layout2 {
-  @apply flex-row;
+  @apply flex-row box-border;
 }
 .first {
   @apply w-3/12;
