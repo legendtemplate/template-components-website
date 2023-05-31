@@ -14,3 +14,21 @@ export interface Components {
     head: string;
     para: string;
 }
+
+export interface Card {
+    id:number;
+    label: string;
+    href: string;
+    img: string;
+}
+export interface PCard {
+    id:number;
+    label: string;
+    href: string;
+    img: string;
+    tag :string;
+    author :string;
+    head : string;
+    dollar : number;
+    Live : string;
+}

@@ -145,15 +145,7 @@ function Page() {
         }}
         transition=".3s ease"
       >
-        <Flex
-        className='items-center justify-between w-full px-4'
-          as="header"
-          _dark={{
-            bg: "gray.800",
-          }}
-          color="inherit"
-          h="14"
-        >
+        <Flex className='items-center justify-between w-full px-4 bg-red-500'>
           <IconButton
             aria-label="Menu"
             display={{
@@ -162,7 +154,8 @@ function Page() {
             }}
             onClick={sidebar.onOpen}
             icon={<FiMenu />}
-            size="sm"
+            className='fixed top-3 left-16 bg-red-500 z-20 text-white hover:text-black'
+            size="md"
           />
        
         </Flex>

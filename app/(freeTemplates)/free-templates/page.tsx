@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SmallHero from '@/components/Small-Hero/page'
+import FreeTemplates from '@/components/templates/free-templates/card/page'
 const data = {
   title:'Free Templates',
   description:'This website provide components and templates of react , next js and typescript support with tailwind css and chakura ui.',
@@ -16,6 +17,7 @@ export default function page() {
     return (
       <>
         <SmallHero head={`${data.title}`} />
+        <FreeTemplates />
       </>
     )
   }

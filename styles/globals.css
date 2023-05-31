@@ -4,6 +4,9 @@
 body {
   overflow-x: hidden;
 }
+.card:hover {
+  transform: scale(0.9, 0.9);
+}
 .layout2 {
   @apply flex-row;
 }

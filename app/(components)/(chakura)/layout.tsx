@@ -1,4 +1,4 @@
-import Sidebar from "@/components/components/htmlCssJs/sidebar/page";
+import Sidebar from "@/components/components/chakura-ui-react-typescript/sidebar/page";
 
 export default function RootLayout({
   children,
