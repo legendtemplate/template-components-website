@@ -25,9 +25,8 @@ import {
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
-  
     return (
-      <Box >
+      <Box className='fixed top-0 left-0 right-0 z-10'>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
@@ -57,9 +56,8 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-            <img src="/logo.png" alt="" 
-            // className='h-20 w-20 object-cover'
-            />  Logo
+            {/* <img src="/logo.png" alt=""  */}
+             Logo
             </Text>
   
             <Flex display={{ base: 'none', lg: 'flex' }} ml={10}>

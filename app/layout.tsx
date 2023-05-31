@@ -12,7 +12,7 @@ const data = {
   Url : 'https://acme.com'
 }
 export const metadata:Metadata = {
-  colorScheme: "dark",  // not change
+  colorScheme: "light",  // not change
   creator: "Jiachi Liu",  // not change
   publisher: "Sebastian Markbåge", // not change
   themeColor: "black", // not change

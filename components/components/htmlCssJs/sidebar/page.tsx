@@ -66,7 +66,7 @@ function Page() {
   };
 
   const SidebarContent = (props: any) => (
-    <Box className="absolute lg:h-3/5 h-full top-[60px] left-0 pb-8 overflow-x-hidden overflow-y-scroll bg-white"
+    <Box className="fixed h-[91%] top-[60px] left-0 pb-8 mb-40 overflow-x-hidden overflow-y-scroll bg-white"
       as="nav"
       _dark={{
         bg: "gray.800",
@@ -103,21 +103,6 @@ function Page() {
         <NavItem>Features</NavItem>
         <NavItem>Footer</NavItem>
         <NavItem>Testimonials</NavItem>
-        <NavItem icon={HiCode} onClick={integrations.onToggle}>
-          Cards
-          <Icon
-            as={MdKeyboardArrowRight}
-            ml="auto"
-          />
-        </NavItem>
-        <Collapse in={integrations.isOpen}>
-          <NavItem pl="12" py="2">
-            Blogs
-          </NavItem>
-          <NavItem pl="12" py="2">
-            Ecommerce
-          </NavItem>
-        </Collapse>
         <NavItem>Statistics</NavItem>
         <NavItem>Carousels</NavItem>
         <NavItem>Button</NavItem>

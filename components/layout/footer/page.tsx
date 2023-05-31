@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <footer className="bg-gray-100">
+    <footer className="bg-gray-100 z-10 absolute left-0 right-0">
       <div className="pt-10 pb-20 relative ">
         <Container>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
