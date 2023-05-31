@@ -110,7 +110,6 @@ function Page() {
             as={MdKeyboardArrowRight}
             ml="auto"
             className="hover:rotate-90"
-            transform={integrations.isOpen}
           />
         </NavItem>
         <Collapse in={integrations.isOpen}>
