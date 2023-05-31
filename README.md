@@ -35,5 +35,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 git add .
-git commit -m "updated : 12:15 31/05/2023"
+git commit -m "updated : 12:37 31/05/2023"
 git push
