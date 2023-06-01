@@ -1,142 +1,98 @@
-"use client";
-import { PCard } from "@/types/index";
-import { Button } from "@chakra-ui/react";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import Container from "@/components/container/page";
-import { FaShoppingCart } from "react-icons/fa";
+'use client'
+import {Card} from '@/types/index'
+import { Button } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useState } from 'react';
+import Container from '@/components/container/page';
 
-const imagePerRow = 3;
+const imagePerRow = 3
 export default function page() {
-  const [next, setNext] = useState(6);
-  const [filteredCards, setFilteredCards] = useState(Cards);
-  const [cat, setCat] = useState();
-// load data
+    const [next, setNext] = useState(6);
   const loadMorePets = () => {
     setNext(next + imagePerRow);
   };
 
-  useEffect(() => {
-    setFilteredCards(
-      Cards.filter(data => {
-        return (
-          (!cat || cat === data.cat)
-        )
-      })
-    )
-  }, [cat])
-
-  const Cats = Array.from(
-    new Set(Cards.map(data => data.cat))
-  )
-
   return (
     <>
-     <select 
-        onChange={(e :any) => setCat(e.target.value)}>
-        <option value="" disabled selected>
-          Select department
-        </option>
-
-        {Cats.map(cat => {
-          return <option key={cat}>{cat}</option>
-        })}
-      </select>
-      <Container>
-        <div className="grid grid-cols-3 gap-5">
-          {filteredCards.slice(0, next).map((data: PCard) => (
-            <Link href={data.href} key={data.id}>
-              <div className="flex flex-col relative ml-6 hover:shadow-lg transition-all ">
-                <div className="img w-full relative">
-                  <img
-                    className="w-full object-cover"
-                    src={data.img}
-                    alt={data.label}
-                    title={data.label}
-                  />
-                </div>
-                <div className="tag absolute top-4 ">
-                  <span className="bg-red-400 p-2 rounded-md ml-3 text-white">
-                    {data.tag}
-                  </span>
-                </div>
-                <div className="head bg-white w-full py-3 px-3">
-                  <h4 className="py-2 text-base font-semibold">{data.head}</h4>
-                  <div>
-                    <span className="font-normal text-sm text-gray-400">
-                      By {data.author}
-                    </span>
-                  </div>
-                  <div className="flex gap-3 items-center my-3">
-                    <div className="flex-grow text-lg font-bold text-red-400 pl-4">
-                      {data.dollar}$
-                    </div>
-                    <div>
-                      <button className="px-3 py-3 text-sm border-2 border-solid border-gray-400 text-black hover:bg-gray-200 hover:text-red-400">
-                        <FaShoppingCart />
-                      </button>
-                    </div>
-                    <div>
-                      <button className="px-3 py-2 text-sm hover:bg-red-400 hover:text-white border-2 border-red-400 border-solid">
-                        Live Preview
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Container>
-      <div className="flex justify-center items-center my-8">
-        <Button
-          className="py-2 px-6 bg-red-500 text-white rounded-md"
-          onClick={loadMorePets}
-        >
-          Load More
-        </Button>
+    <Container>
+      <div className="cards-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-10">
+        {Cards.slice(0, next).map((data: Card) => (
+          <Link href={data.href} key={data.id}>
+            <div className="card my-7 mx-auto h-48 rounded-lg cursor-pointer">
+            <div className="rounded-lg">
+              <img
+                className="object-cover rounded-lg"
+                src={data.img}
+                alt={data.label}
+                title={data.label}
+              />{" "}
+            </div>
+            <div className="text-white text-center font bold -mt-[100px] h-10 text-2xl">
+              <p>{data.label}</p>
+            </div>
+          </div>
+          </Link>
+        ))}
       </div>
+    </Container>
+      <div className="flex justify-center items-center my-8">
+      <Button
+        className="py-2 px-6 bg-red-500 text-white rounded-md"
+        onClick={loadMorePets}
+      >
+        Load More
+      </Button>
+    </div>
     </>
   );
 }
-const Cards: PCard[] = [
+const Cards: Card[] = [
   {
     id: 0,
-    label: "Blog Websites 1",
+    label: "Blog Websites",
     href: "/premium-templates/blog-website",
     img: "https://i.redd.it/b3esnz5ra34y.jpg",
-    tag: "Business",
-    author: "Muzammil",
-    head: "Avada | Website Builder For WordPress & WooCommerce",
-    dollar: 45,
-    Live: "",
-    cat : "Html"
   },
   {
     id: 1,
-    label: "Blog Websites 2",
-    href: "/premium-templates/blog-website",
+    label: "Ecommerce Websites",
+    href: "/premium-templates/ecommerce-website",
     img: "https://i.redd.it/b3esnz5ra34y.jpg",
-    tag: "Business-2",
-    author: "Muzammil",
-    head: "Avada | Website Builder For WordPress & WooCommerce",
-    dollar: 45,
-    Live: "",
-    cat : "Html"
-  },
-  {
+},
+{
     id: 2,
-    label: "Blog Websites 3",
-    href: "/premium-templates/blog-website",
+    label: "Landing Pages",
+    href: "/",
     img: "https://i.redd.it/b3esnz5ra34y.jpg",
-    tag: "Business",
-    author: "Muzammil",
-    head: "Avada | Website Builder For WordPress & WooCommerce",
-    dollar: 45,
-    Live: "",
-    cat : "js"
+},
+{
+    id: 3,
+    label: "Education Websites",
+    href: "/",
+    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+  },
+{
+    id: 4,
+    label: "Resume Websites",
+    href: "/",
+    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+  },
+{
+    id: 5,
+    label: "Coming Soon",
+    href: "/",
+    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+  },
+{
+    id: 6,
+    label: "Coming Soon",
+    href: "/",
+    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+  },
+{
+    id: 7,
+    label: "Coming Soon",
+    href: "/",
+    img: "https://i.redd.it/b3esnz5ra34y.jpg",
   },
 ];
-
-
-

@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import SmallHero from '@/components/Small-Hero/page'
 
-import Card from '@/components/templates/premium-templates/blog-website/card/page'
+import Card from '@/components/templates/premium-templates/ecommerce-website/card/page'
 
-// ecommerce-website
+
 const data = {
-  title:'Blogs Templates',
+  title:'Ecommerce Templates',
   description:'This website provide components and templates of react , next js and typescript support with tailwind css and chakura ui.',
   Url : 'https://acme.com'
 }
