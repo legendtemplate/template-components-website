@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import Container from "@/components/container/page";
 import { Footer } from "@/types";
 import Link from "next/link";
-import Logo from '@/components/layout/footer/page'
+import Logo from '@/components/layout/logo/page'
 
 export default function page() {
   return (
