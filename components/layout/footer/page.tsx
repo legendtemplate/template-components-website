@@ -2,14 +2,16 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import Container from "@/components/container/page";
 import { Footer } from "@/types";
 import Link from "next/link";
+import Logo from '@/components/layout/footer/page'
 
 export default function page() {
   return (
     <footer className="bg-gray-100 z-10 absolute left-0 right-0">
-      <div className="pt-10 pb-20 relative ">
+      <div className="pt-10 pb-10 relative ">
         <Container>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
             <div className="">
+              <Logo />
               <h3 className="text-xl mb-7 font-semibold">Get in Touch</h3>
               <p>
                 Don’t miss any updates of our new templates and extensions.!
@@ -81,11 +83,11 @@ export default function page() {
         <Container>
           <div className="flex items-center justify-between">
             <div className="text-left">
-              <p className="mb-0 f_400">
+              <p className="mb-0 md:text-base text-sm">
                 © 2023 All rights reserved.
               </p>
             </div>
-            <div className="text-right">
+            <div className="text-right md:text-base text-sm">
               <p>
                 Made with 
                 <Link href="/" target="_blank">
