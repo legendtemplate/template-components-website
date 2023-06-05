@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <>
+    <div>
       <Link href="/">
         <img
           src="/logo.png"
@@ -11,6 +11,6 @@ export default function page() {
           title="website template and components logo"
         />
       </Link>
-    </>
+    </div>
   );
 }
