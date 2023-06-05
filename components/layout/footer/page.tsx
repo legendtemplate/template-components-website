@@ -2,7 +2,6 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import Container from "@/components/container/page";
 import { Footer } from "@/types";
 import Link from "next/link";
-import Logo from '@/components/layout/logo/page'
 
 export default function page() {
   return (
@@ -11,7 +10,14 @@ export default function page() {
         <Container>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
             <div className="">
-              <Logo />
+            <Link href="/">
+        <img
+          src="/logo2.png"
+          className="md:h-16 h-12 w-auto"
+          alt="website template and components logo"
+          title="website template and components logo"
+        />
+      </Link>
               <h3 className="text-xl mb-7 font-semibold">Get in Touch</h3>
               <p>
                 Don’t miss any updates of our new templates and extensions.!
