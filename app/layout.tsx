@@ -5,6 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 import Footer from "@/components/layout/footer/page";
 import Navbar from "@/components/layout/navbar/page";
 import { Metadata } from 'next';
+import { Provider } from 'react-redux';
+
+import { store } from "../redux/Store/Store";
 
 const data = {
   title:'Deault',
@@ -46,11 +49,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        
+  {/* <Provider store={store}> */}
+
         <Providers>
           <Navbar />
           {children}
           <Footer />
         </Providers>
+  {/* </Provider> */}
       </body>
     </html>
   );

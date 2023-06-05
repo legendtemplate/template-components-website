@@ -15,10 +15,10 @@ export default function page() {
   return (
     <>
     <Container>
-      <div className="cards-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-10">
+      <div className="cards-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 ">
         {Cards.slice(0, next).map((data: Card) => (
           <Link href={data.href} key={data.id}>
-            <div className="card my-7 mx-auto h-48 rounded-lg cursor-pointer">
+            <div className="card mb-10 mx-auto h-auto rounded-lg cursor-pointer">
             <div className="rounded-lg">
               <img
                 className="object-cover rounded-lg"
@@ -27,7 +27,7 @@ export default function page() {
                 title={data.label}
               />{" "}
             </div>
-            <div className="text-white text-center font bold -mt-[100px] h-10 text-2xl">
+            <div className="text-white text-center font bold -mt-[40px] h-10 text-2xl">
               <p>{data.label}</p>
             </div>
           </div>
@@ -51,48 +51,48 @@ const Cards: Card[] = [
     id: 0,
     label: "Blog Websites",
     href: "/premium-templates/blog-website",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/blog_website.png",
   },
   {
     id: 1,
     label: "Ecommerce Websites",
     href: "/premium-templates/ecommerce-website",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/ecommerce_website.png",
 },
 {
     id: 2,
     label: "Landing Pages",
     href: "/",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/landing_page_website.png",
 },
 {
     id: 3,
     label: "Education Websites",
     href: "/",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/education_website.png",
   },
 {
     id: 4,
     label: "Resume Websites",
     href: "/",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/resume_website.png",
   },
 {
     id: 5,
     label: "Coming Soon",
     href: "/",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/coming_soon.png",
   },
 {
     id: 6,
     label: "Coming Soon",
     href: "/",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/coming_soon.png",
   },
 {
     id: 7,
     label: "Coming Soon",
     href: "/",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/coming_soon.png",
   },
 ];

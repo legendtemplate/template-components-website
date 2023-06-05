@@ -5,8 +5,9 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Container from "@/components/container/page";
 import { FaShoppingCart } from "react-icons/fa";
-
+import { Product } from "@/types/index";
 const imagePerRow = 3;
+
 export default function page() {
   const [next, setNext] = useState(6);
   const [filteredCards, setFilteredCards] = useState(Cards);
@@ -44,20 +45,20 @@ export default function page() {
           return <option className='py-2 px-6 text-lg bg-gray-400' key={cat}>{cat}</option>
         })}
       </select>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
           {filteredCards.slice(0, next).map((data: PCard) => (
             <Link href={data.href} key={data.id}>
               <div className="flex flex-col relative ml-6 hover:shadow-lg transition-all ">
                 <div className="img w-full relative">
                   <img
-                    className="w-full object-cover"
+                    className="w-full object-cover md:h-52 h-auto "
                     src={data.img}
                     alt={data.label}
                     title={data.label}
                   />
                 </div>
                 <div className="tag absolute top-4 ">
-                  <span className="bg-red-400 p-2 rounded-md ml-3 text-white">
+                  <span className="bg-red-400 p-2 text-sm rounded-md ml-3 text-white">
                     {data.tag}
                   </span>
                 </div>
@@ -76,6 +77,9 @@ export default function page() {
                       <button className="px-3 py-3 text-sm border-2 border-solid border-gray-400 text-black hover:bg-gray-200 hover:text-red-400">
                         <FaShoppingCart />
                       </button>
+                      
+        {/* <AddToCartBtn product={props.product} /> */}
+
                     </div>
                     <div>
                       <button className="px-3 py-2 text-sm hover:bg-red-400 hover:text-white border-2 border-red-400 border-solid">
@@ -105,7 +109,7 @@ const Cards: PCard[] = [
     id: 0,
     label: "Blog Websites 1",
     href: "/premium-templates/blog-website",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/blog/2.webp",
     tag: "Business",
     author: "Muzammil",
     head: "Avada | Website Builder For WordPress & WooCommerce",
@@ -117,7 +121,7 @@ const Cards: PCard[] = [
     id: 1,
     label: "Blog Websites 2",
     href: "/premium-templates/blog-website",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/blog/blog_website_next.jpg",
     tag: "Business-2",
     author: "Muzammil",
     head: "Avada | Website Builder For WordPress & WooCommerce",
@@ -129,7 +133,7 @@ const Cards: PCard[] = [
     id: 2,
     label: "Blog Websites 3",
     href: "/premium-templates/blog-website",
-    img: "https://i.redd.it/b3esnz5ra34y.jpg",
+    img: "/templates/blog/blog_website.jpg",
     tag: "Business",
     author: "Muzammil",
     head: "Avada | Website Builder For WordPress & WooCommerce",

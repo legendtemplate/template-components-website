@@ -2,11 +2,11 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import { Feature } from "@/types";
 import { ToptoBottom } from '../../animation/Top-to-Bottom/page'
-
+import Container from "../container/page";
 export default function page() {
   return (
     <section className="py-5">
-      <div className="container mx-auto px-12">
+      <Container>
         <div className="justify-center py-3">
           <div className="section-head">
             <h4>
@@ -26,13 +26,13 @@ export default function page() {
               <p className=" text-red-500 text-xl ">
                 <FaCheck />
               </p>
-              <p className=" font-bold ml-16 text-black hover:text-gray-500">
+              <p className=" font-bold md:ml-16 ml-10 text-black hover:text-gray-500">
                 <a href="#">{data.label}</a>
               </p>
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

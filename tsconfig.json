@@ -24,9 +24,10 @@
       "@/*": ["./*"],
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
-      "@/types/*": ["types/*"]
+      "@/types/*": ["types/*"],
+      "@/redux/*": ["redux/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/cart/QtyBtn"],
   "exclude": ["node_modules"]
 }
