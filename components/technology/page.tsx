@@ -98,7 +98,6 @@ export default function page() {
           </div>
         </Container>
       </section>
-      {/* </Container> */}
     </>
   );
 }

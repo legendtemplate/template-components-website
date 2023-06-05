@@ -1,8 +1,8 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 import { Feature } from "@/types";
-import { ToptoBottom } from '../../animation/Top-to-Bottom/page'
 import Container from "../container/page";
+
 export default function page() {
   return (
     <section className="py-5">

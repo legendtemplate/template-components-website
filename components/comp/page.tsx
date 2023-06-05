@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Components } from "@/types";
 import Container from "@/components/container/page";
 import { Button } from "@chakra-ui/react";
