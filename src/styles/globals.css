@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,*::before,*::after{
+  @apply m-0 p-0 box-border;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  @apply overflow-x-hidden m-0 p-0 text-base leading-normal bg-slate-50;
+}
+::selection {
+  @apply bg-red-500 text-white;
+}
+.card:hover {
+  transform: scale(0.9, 0.9);
+}
+.layout2 {
+  @apply flex-row box-border;
+}
+.first {
+  @apply w-3/12;
+}
+.second {
+  @apply w-9/12;
+}
+@media (max-width:991px) {
+  .layout2 {
+    @apply flex-col;
+  }
+  }
+@media (max-width:991px) {
+  
+  .first {
+    @apply w-full;
+  }
+  .second {
+    @apply w-full;
+  }
+}
+.shero {
+  background: linear-gradient(rgb(247, 68, 68), white);
+}
+/* technology */
+.feature{
+  box-shadow: 5px 5px 20px rgba(0 0 0/0.15);
+  transition: transform 200ms ease-in;
+}
+
+.feature:hover {
+  transform: scale(1.03);
+}
+
+  /* heading */
+  .section-head {
+    @apply mb-6 text-center
+  }
+  .section-head h4 {
+    color:#f91942;
+    line-height: 1;
+    letter-spacing:0.3px; 
+    @apply relative p-0 mb-7 font-bold text-3xl;
+  }
+  .section-head h4:before {
+    content: '';
+    background: #f91942;
+    @apply w-16 right-0 left-0 my-0 mx-auto h-1 absolute -bottom-2;
+  }
+  .section-head h4 span {
+  @apply font-bold pb-1 text-gray-700;
+  }
+
+/* Component Templates */
+  .item:hover .item, .item:hover span.icon{
+	  background:#fff;
+	  border-radius:10px;
+	  transition: all 0.5s ease 0s;
+  }
+  .item:hover h6, .item:hover p{
+	  color:#fff;
+	  transition: all 0.5s ease 0s;
+  }
+
+  /* code editor */
+  .first {
+	color:rgb(74, 74, 74); font-weight:400;
+  }
+
+  
+
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+select::-ms-expand {
+  display: none!important;
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 215 20.2% 65.1%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+ 
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+ 
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+ 
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+ 
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+ 
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 216 34% 17%;
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+
+
+
+
+.h1-text{
+  font-size: 1.3rem;
+  margin: 40px 0;
+  color: #2c2c2c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1-text i{
+  background-color: #509bfc;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  box-shadow: 2px 5px 30px rgba(80, 123, 252, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0 20px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} 
+
+
+.box{
+  position: relative;
+  min-width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 3px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.top-bar{
+  width: 50%;
+  height: 4px;
+  background: #507bfc;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+  width: 100%;
+}
+
+.fa-check-circle{
+  color: #17b667;
+}
+
+/* creating heart */
+.heart{
+  color: rgba(155,155,155);
+}
+.heart::before{
+  content: '\f004';
+  font-family: fontawesome;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.box .heart-btn:checked ~ .heart::before{
+  color:#e41934
+}
+.heart-btn{
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  padding: 1rem;
+  display: none;
+}
+
+
+.content img{
+  width: 90px;
+  height: 90px;
+  border-radius:100px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content strong{
+  font-weight: 500;
+  color: #141414;
+  margin-top: 10px;
+}
+.content p{
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin: 4px 0px 10px 0px;
+  cursor: pointer;
+}
+.content p:hover{
+  text-decoration: underline;
+}
+
+.btn{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.btn a i{
+  margin-right: 9px;
+}
+.btn a{
+  border-radius: 20px;
+  color: #8b8b8b;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+.btn a:hover{
+  color: #fff;
+  box-shadow: 2px 5px 15px rgba(80,123,252,0.05);
+  background-color: #507bfc;
+  transition: all ease 0.5s;
+}
