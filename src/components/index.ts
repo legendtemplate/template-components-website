@@ -22,8 +22,10 @@ import Comp from "./home/Components";
 import Hire from "./home/Hire";
 
 // Components Sidebar
-import TailwindCssSidebar from './sidebar/TailwindCss'
-import ChakuraUiSidebar from './sidebar/ChakuraUi'
+import TailwindCssSidebar from './template/tailwindcss/Sidebar'
+import TailwindCard from './template/tailwindcss/TailwindCard'
+import ChakuraUiSidebar from './template/ChakuraUi/Sidebar'
+import ChakuraCard from './template/ChakuraUi/ChakuraCard'
 import CssSidebar from './sidebar/Css'
 
 // Card
@@ -55,7 +57,9 @@ export {
 
 // components sidebar
 TailwindCssSidebar,
+TailwindCard,
 ChakuraUiSidebar,
+ChakuraCard,
 CssSidebar,
 
 // Card
