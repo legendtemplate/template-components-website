@@ -26,10 +26,16 @@ import TailwindCssSidebar from './template/tailwindcss/Sidebar'
 import TailwindCard from './template/tailwindcss/TailwindCard'
 import ChakuraUiSidebar from './template/ChakuraUi/Sidebar'
 import ChakuraCard from './template/ChakuraUi/ChakuraCard'
-import CssSidebar from './sidebar/Css'
+import CssSidebar from './template/Css/Sidebar'
+import CssCard from './template/Css/CssCard'
+
+import FreeCard from './template/Free/FreeCard'
+import PremiumCard from './template/Premium/PremiumCard'
 
 // Card
 import Card from './card/page'
+import ProductCard from './card/ProductCard'
+
 
 export {
   // common
@@ -61,8 +67,14 @@ TailwindCard,
 ChakuraUiSidebar,
 ChakuraCard,
 CssSidebar,
+CssCard,
+
+// 
+FreeCard,
+PremiumCard,
 
 // Card
 Card,
+ProductCard,
 
 };

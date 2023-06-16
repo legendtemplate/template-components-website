@@ -21,18 +21,20 @@ export interface Card {
   href: string;
   img: string;
 }
+export interface Tag {
+  id: number;
+  href: string;
+  label:string;
+}
 export interface PCard {
   id: number;
-  label: string;
+  head: string;
+  para: string;
   href: string;
   img: string;
-  tag: string;
-  author: string;
-  head: string;
-  dollar: number;
-  Live: string;
-  cat: string;
+  tags: [];
 }
+
 
 export interface Product {
   id: number;

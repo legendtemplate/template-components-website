@@ -4,7 +4,7 @@ const Cards: Card[] = [
     {
       id: 0,
       label: "Blog Websites",
-      href: "/",
+      href: "/premium-templates/blog-website",
       img: "https://i.redd.it/b3esnz5ra34y.jpg",
     },
     {
